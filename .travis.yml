@@ -18,3 +18,7 @@ install:
 script:
   # Run some test commands
   - ./tests/run_tests
+  # Test packges installation
+  - vim --version || exit 1
+  - curl --version || exit 1
+  - wget --version || exit 1
