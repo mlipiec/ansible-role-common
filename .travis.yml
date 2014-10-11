@@ -17,5 +17,4 @@ install:
 
 script:
   # Run some test commands
-  - "ansible-playbook -i tests/hosts tests/test.yml --syntax-check"
-  - "ansible-playbook -i tests/hosts tests/test.yml --connection=local -s"
+  - ./tests/run_tests
