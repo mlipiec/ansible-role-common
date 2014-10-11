@@ -3,6 +3,11 @@
 language: python
 python: "2.7"
 
+notifications:
+  email:
+    recipients:
+      - devops@gildia.info
+
 before_install:
   # Updating apt cache repository
   - "sudo apt-get update -qq"
@@ -13,3 +18,4 @@ install:
 script:
   # Run some test commands
   - "ansible-playbook -i tests/hosts tests/test.yml --syntax-check"
+  - "ansible-playbook -i tests/hosts tests/test.yml --connection=local"
